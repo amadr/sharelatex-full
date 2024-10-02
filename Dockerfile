@@ -1,4 +1,4 @@
-FROM sharelatex/sharelatex:5.1.1
+FROM --platform=linux/arm64 sharelatex/sharelatex:latest
 
 SHELL ["/bin/bash", "-cx"]
 
@@ -27,9 +27,6 @@ RUN apt-get install python3-pygments -y
 
 # install inkscape for svg support
 RUN apt-get install inkscape -y
-
-# install lilypond
-RUN apt-get install lilypond -y
 
 # enable shell-escape by default:
 RUN TEXLIVE_FOLDER=$(find /usr/local/texlive/ -type d -name '20*') \
