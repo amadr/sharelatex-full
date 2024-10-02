@@ -1,4 +1,4 @@
-FROM --platform=linux/arm64 sharelatex/sharelatex:latest
+FROM --platform=linux/arm64 pingwin02/sharelatex-arm:base
 
 SHELL ["/bin/bash", "-cx"]
 
